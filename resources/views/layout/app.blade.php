@@ -19,10 +19,13 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
+    @vite(['resources/css/app.css', 'resources/css/app.js'])
+    @livewireStyles
 </head>
 <body class="antialiased">
 
     {{ $slot }}
 
+    @livewireScripts
 </body>
 </html>
