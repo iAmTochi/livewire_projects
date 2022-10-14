@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/counter', function () {
     return view('welcome');
@@ -19,3 +22,5 @@ Route::get('/counter', function () {
 
 
 Route::get('/calculator', \App\Http\Livewire\Calculator::class)->name('calculator');
+
+Route::get('todo-list', \App\Http\Livewire\TodoList::class)->name('todo-list');
