@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Continent;
 use App\Models\Country;
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -50,5 +51,7 @@ class DatabaseSeeder extends Seeder
                     ->count(10)
                     ->create(['continent_id' => $continent->id]);
             });
+
+        Product::factory(100)->create();
     }
 }
